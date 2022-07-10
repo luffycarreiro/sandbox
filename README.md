@@ -1,4 +1,4 @@
-# Teller Sandbox API
+# Sandbox API
 
 This is an API that returns the balances in an account and transactions depending on the token provided.
 
@@ -30,13 +30,30 @@ GET /accounts/:account_id/transactions/:transaction_id
 ## To start your Phoenix server:
 
 * Install dependencies with `mix deps.get`
+* in assets directory
+
+  ```
+  npm install
+  ```
 * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
 
 Or if you have docker just:
 
-* ```
-  docker-compose up -d
-  ```
+```
+
+docker-compose up -d
+```
+
+
+ Inside docker
+
+```
+cd assets && npm install
+```
+
+```
+  
+```
 
 ## Real time data
 
