@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.28.4">
+    <meta name="project" content="Teller Sandbox API v0.1.0">
+
+    <title>Teller Sandbox API — Teller Sandbox API v0.1.0</title>
+    <link rel="stylesheet" href="dist/elixir-b6f1ed5df9b1d42a7309.css" />
+
+    <script src="dist/sidebar_items-cf2465e98e.js"></script>
+
+      <script src="docs_config.js"></script>
+
+    <script async src="dist/app-bd1cb213813bf4825aa2.js"></script>
+
+
+  </head>
+  <body data-type="extras">
+    <script>
+
+      try {
+        var settings = JSON.parse(localStorage.getItem('ex_doc:settings') || '{}');
+
+        if (settings.theme === 'dark' ||
+           ((settings.theme === 'system' || settings.theme == null) &&
+             window.matchMedia('(prefers-color-scheme: dark)').matches)
+           ) {
+          document.body.classList.add('dark')
+        }
+      } catch (error) { }
+    </script>
+
+<div class="main">
+
+
+<section class="sidebar">
+  <button class="sidebar-button sidebar-toggle" aria-label="toggle sidebar">
+    <i class="ri-menu-line ri-lg" title="Collapse/expand sidebar"></i>
+  </button>
+
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button" aria-label="Submit Search">
+      <i class="ri-search-2-line" aria-hidden="true" title="Submit search"></i>
+    </button>
+    <button type="button" tabindex="-1" class="search-close-button" aria-label="Cancel Search">
+      <i class="ri-close-line ri-lg" aria-hidden="true" title="Cancel search"></i>
+    </button>
+    <label class="search-label">
+      <p class="sr-only">Search</p>
+      <input name="q" type="text" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" />
+    </label>
+  </form>
+
+  <div class="autocomplete">
+    <div class="autocomplete-results">
+    </div>
+  </div>
+
+  <div class="sidebar-header">
+
+    <div class="sidebar-projectDetails">
+      <a href="http://humbertocarreiro.com" class="sidebar-projectName" translate="no">
+Teller Sandbox API
+      </a>
+      <strong class="sidebar-projectVersion" translate="no">
+        v0.1.0
+      </strong>
+    </div>
+    <ul class="sidebar-listNav">
+      <li><a id="extras-list-link" href="#full-list">Pages</a></li>
+
+        <li><a id="modules-list-link" href="#full-list">Modules</a></li>
+
+
+    </ul>
+  </div>
+
+  <div class="gradient"></div>
+  <ul id="full-list" class="sidebar-fullList"></ul>
+</section>
+
+<section class="content">
+  <output role="status" id="toast"></output>
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+<h1>
+<button class="settings display-settings">
+  <i class="ri-settings-3-line"></i>
+  <span class="sr-only">Settings</span>
+</button>
+
+
+    <a href="https://github.com/Khermess/api_bank/blob/main/README.md#L1" title="View Source" class="view-source" rel="help">
+      <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+      <span class="sr-only">View Source</span>
+    </a>
+
+  <span>Teller Sandbox API</span>
+</h1>
+
+<p>This is an API that returns the balances in an account and transactions depending on the token provided.</p><p>Token must be provided as basic Auth filling the name with the following format, password should be left empty.</p><pre><code class="makeup elixir" translate="no"><span class="n">test_</span><span class="o">&lt;</span><span class="n">token_id</span><span class="o">&gt;</span></code></pre><p>token_id must be any string with non special chars like</p><pre><code class="makeup elixir" translate="no"><span class="bp">_</span></code></pre><p> .</p><h2 id="endpoints" class="section-heading">
+  <a href="#endpoints" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">endpoints</p>
+  </a>
+  Endpoints
+</h2>
+<pre><code class="makeup elixir" translate="no"><span class="nc">GET</span><span class="w"> </span><span class="o">/</span><span class="n">accounts</span><span class="w">
+</span><span class="nc">GET</span><span class="w"> </span><span class="o">/</span><span class="n">accounts</span><span class="o">/</span><span class="ss">:account_id</span><span class="w">
+</span><span class="nc">GET</span><span class="w"> </span><span class="o">/</span><span class="n">accounts</span><span class="o">/</span><span class="ss">:account_id</span><span class="o">/</span><span class="n">details</span><span class="w">
+</span><span class="nc">GET</span><span class="w"> </span><span class="o">/</span><span class="n">accounts</span><span class="o">/</span><span class="ss">:account_id</span><span class="o">/</span><span class="n">balances</span><span class="w">
+</span><span class="nc">GET</span><span class="w"> </span><span class="o">/</span><span class="n">accounts</span><span class="o">/</span><span class="ss">:account_id</span><span class="o">/</span><span class="n">transactions</span><span class="w">
+</span><span class="nc">GET</span><span class="w"> </span><span class="o">/</span><span class="n">accounts</span><span class="o">/</span><span class="ss">:account_id</span><span class="o">/</span><span class="n">transactions</span><span class="o">/</span><span class="ss">:transaction_id</span></code></pre><h2 id="to-start-your-phoenix-server" class="section-heading">
+  <a href="#to-start-your-phoenix-server" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">to-start-your-phoenix-server</p>
+  </a>
+  To start your Phoenix server:
+</h2>
+<ul><li>Install dependencies with <a href="https://hexdocs.pm/mix/Mix.Tasks.Deps.Get.html"><code class="inline">mix deps.get</code></a></li><li>Start Phoenix endpoint with <a href="https://hexdocs.pm/phoenix/1.6.10/Mix.Tasks.Phx.Server.html"><code class="inline">mix phx.server</code></a> or inside IEx with <code class="inline">iex -S mix phx.server</code></li></ul><p>Or if you have docker just:</p><ul><li><pre><code class="makeup elixir" translate="no"><span class="w">  </span><span class="n">docker</span><span class="o">-</span><span class="n">compose</span><span class="w"> </span><span class="n">up</span><span class="w"> </span><span class="o">-</span><span class="n">d</span></code></pre></li></ul><h2 id="real-time-data" class="section-heading">
+  <a href="#real-time-data" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">real-time-data</p>
+  </a>
+  Real time data
+</h2>
+<p>Now you can visit <a href="http://localhost:4000"><code class="inline">localhost:4000</code></a> from your browser for getting real time data on endpoint usage.</p><h2 id="docs" class="section-heading">
+  <a href="#docs" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">docs</p>
+  </a>
+  Docs
+</h2>
+<p><a href="http://localhost:4000/docs/index.html"><code class="inline">localhost:4000/docs/index.html</code></a></p><h2 id="test" class="section-heading">
+  <a href="#test" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">test</p>
+  </a>
+  Test
+</h2>
+<p>mix test</p>
+<div class="bottom-actions">
+  <div class="bottom-actions-item">
+
+      <a href="api-reference.html" class="bottom-actions-button" rel="prev">
+        <span class="subheader">
+          ← Previous Page
+        </span>
+        <span class="title">
+API Reference
+        </span>
+      </a>
+
+  </div>
+  <div class="bottom-actions-item">
+
+  </div>
+</div>
+
+      <footer class="footer">
+
+        <p>
+          Built using
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.28.4) for the
+
+            <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
+
+        </p>
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+
+
+  </body>
+</html>

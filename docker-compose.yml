@@ -1,0 +1,18 @@
+services:
+  sandbox:
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    command:
+      elixir --sname sandbox --cookie sandbox -S mix run --no-halt
+    entrypoint: ["./docker/entrypoint.sh"]
+    ports:
+      - "4000:4000"
+    environment:
+      MIX_ENV: dev
+    volumes:
+      - .:/app
+      # Enable xorg passthrough
+      - $XAUTHORITY:/root/.Xauthority:ro
+      - /tmp/.X11-unix:/tmp/.X11-unix:ro
+version: '2.3'

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.28.4">
+    <meta name="project" content="sandbox v0.1.0">
+
+    <title>Sandbox.Transactions — sandbox v0.1.0</title>
+    <link rel="stylesheet" href="dist/elixir-b6f1ed5df9b1d42a7309.css" />
+
+    <script src="dist/sidebar_items-97a3ac0a15.js"></script>
+
+      <script src="docs_config.js"></script>
+
+    <script async src="dist/app-bd1cb213813bf4825aa2.js"></script>
+
+
+  </head>
+  <body data-type="modules">
+    <script>
+
+      try {
+        var settings = JSON.parse(localStorage.getItem('ex_doc:settings') || '{}');
+
+        if (settings.theme === 'dark' ||
+           ((settings.theme === 'system' || settings.theme == null) &&
+             window.matchMedia('(prefers-color-scheme: dark)').matches)
+           ) {
+          document.body.classList.add('dark')
+        }
+      } catch (error) { }
+    </script>
+
+<div class="main">
+
+
+<section class="sidebar">
+  <button class="sidebar-button sidebar-toggle" aria-label="toggle sidebar">
+    <i class="ri-menu-line ri-lg" title="Collapse/expand sidebar"></i>
+  </button>
+
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button" aria-label="Submit Search">
+      <i class="ri-search-2-line" aria-hidden="true" title="Submit search"></i>
+    </button>
+    <button type="button" tabindex="-1" class="search-close-button" aria-label="Cancel Search">
+      <i class="ri-close-line ri-lg" aria-hidden="true" title="Cancel search"></i>
+    </button>
+    <label class="search-label">
+      <p class="sr-only">Search</p>
+      <input name="q" type="text" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" />
+    </label>
+  </form>
+
+  <div class="autocomplete">
+    <div class="autocomplete-results">
+    </div>
+  </div>
+
+  <div class="sidebar-header">
+
+    <div class="sidebar-projectDetails">
+      <a href="api-reference.html" class="sidebar-projectName" translate="no">
+sandbox
+      </a>
+      <strong class="sidebar-projectVersion" translate="no">
+        v0.1.0
+      </strong>
+    </div>
+    <ul class="sidebar-listNav">
+      <li><a id="extras-list-link" href="#full-list">Pages</a></li>
+
+        <li><a id="modules-list-link" href="#full-list">Modules</a></li>
+
+
+    </ul>
+  </div>
+
+  <div class="gradient"></div>
+  <ul id="full-list" class="sidebar-fullList"></ul>
+</section>
+
+<section class="content">
+  <output role="status" id="toast"></output>
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+<h1>
+<button class="settings display-settings">
+  <i class="ri-settings-3-line"></i>
+  <span class="sr-only">Settings</span>
+</button>
+
+
+  <span translate="no">Sandbox.Transactions</span> 
+  <small class="app-vsn" translate="no">(sandbox v0.1.0)</small>
+
+</h1>
+
+
+  <section id="moduledoc">
+<p>Context for transactions</p>
+  </section>
+
+
+  <section id="summary" class="details-list">
+    <h1 class="section-heading">
+      <a class="hover-link" href="#summary">
+        <i class="ri-link-m" aria-hidden="true"></i>
+        <span class="sr-only">Link to this section</span>
+      </a>
+      Summary
+    </h1>
+
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#get_balance/2" translate="no">get_balance(conn, id)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Gets accounts balance</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#get_transaction/3" translate="no">get_transaction(conn, account_id, transaction_id)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Returns a transaciont by ID</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#list_transactions/4" translate="no">list_transactions(conn, id, count \\ nil, from_id \\ nil)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>List all transactions. Transactions are calculated from the end of the yeary to 90 days before today.</p></div>
+
+      </div>
+
+  </div>
+
+  </section>
+
+
+  <section id="functions" class="details-list">
+    <h1 class="section-heading">
+      <a class="hover-link" href="#functions">
+        <i class="ri-link-m" aria-hidden="true"></i>
+        <span class="sr-only">Link to this section</span>
+      </a>
+Functions
+    </h1>
+    <div class="functions-list">
+<section class="detail" id="get_balance/2">
+
+  <div class="detail-header">
+    <a href="#get_balance/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">get_balance(conn, id)</h1>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> get_balance(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">map</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">binary</a>()) ::
+  {:ok,
+   %Sandbox.Transactions.Balances{
+     account_id: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+     available: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+     ledger: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+     links: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>()
+   }}
+  | :error</pre>
+
+      </div>
+
+<p>Gets accounts balance</p>
+  </section>
+</section>
+<section class="detail" id="get_transaction/3">
+
+  <div class="detail-header">
+    <a href="#get_transaction/3" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">get_transaction(conn, account_id, transaction_id)</h1>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> get_transaction(<a href="https://hexdocs.pm/plug/1.13.6/Plug.Conn.html#t:t/0">Plug.Conn.t</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">binary</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">binary</a>()) ::
+  :error
+  | {:ok,
+     %Sandbox.Transactions.Transaction{
+       account_id: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+       amount: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+       date: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+       description: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+       details: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+       id: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+       links: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+       running_balance: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+       status: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+       type: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>()
+     }}</pre>
+
+      </div>
+
+<p>Returns a transaciont by ID</p>
+  </section>
+</section>
+<section class="detail" id="list_transactions/4">
+
+    <span id="list_transactions/2"></span>
+
+    <span id="list_transactions/3"></span>
+
+  <div class="detail-header">
+    <a href="#list_transactions/4" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">list_transactions(conn, id, count \\ nil, from_id \\ nil)</h1>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> list_transactions(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">map</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">binary</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">number</a>() | nil, <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">binary</a>() | nil) ::
+  {:ok,
+   [
+     %Sandbox.Transactions.Transaction{
+       account_id: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+       amount: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+       date: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+       description: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+       details: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+       id: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+       links: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+       running_balance: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+       status: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+       type: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>()
+     }
+   ]}
+  | :error</pre>
+
+      </div>
+
+<p>List all transactions. Transactions are calculated from the end of the yeary to 90 days before today.</p><p>So transactions are consistent within a year, it starts calculating transactions from a start balance and adds
+from 0 to 5 transactions per day.</p><p>Transactions are calculated as an Integer and divided by 100 so we don't have the problem of Float calculations.</p><p>Every transactions is calculated using  :erlang.phash2(), which hashses any string and returns an Integer.</p><p>Transactions could be filtered using using from_id and count from id will show the next transaction after that id
+and it will return the number of transactions by count.</p>
+  </section>
+</section>
+
+    </div>
+  </section>
+
+      <footer class="footer">
+
+        <p>
+          Built using
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.28.4) for the
+
+            <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
+
+        </p>
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+
+
+  </body>
+</html>
