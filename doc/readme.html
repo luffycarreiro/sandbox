@@ -7,10 +7,10 @@
     <meta name="generator" content="ExDoc v0.28.4">
     <meta name="project" content="Teller Sandbox API v0.1.0">
 
-    <title>Teller Sandbox API — Teller Sandbox API v0.1.0</title>
+    <title>Sandbox API — Teller Sandbox API v0.1.0</title>
     <link rel="stylesheet" href="dist/elixir-b6f1ed5df9b1d42a7309.css" />
 
-    <script src="dist/sidebar_items-cf2465e98e.js"></script>
+    <script src="dist/sidebar_items-069d0a1cf3.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -99,7 +99,7 @@ Teller Sandbox API
       <span class="sr-only">View Source</span>
     </a>
 
-  <span>Teller Sandbox API</span>
+  <span>Sandbox API</span>
 </h1>
 
 <p>This is an API that returns the balances in an account and transactions depending on the token provided.</p><p>Token must be provided as basic Auth filling the name with the following format, password should be left empty.</p><pre><code class="makeup elixir" translate="no"><span class="n">test_</span><span class="o">&lt;</span><span class="n">token_id</span><span class="o">&gt;</span></code></pre><p>token_id must be any string with non special chars like</p><pre><code class="makeup elixir" translate="no"><span class="bp">_</span></code></pre><p> .</p><h2 id="endpoints" class="section-heading">
@@ -119,7 +119,7 @@ Teller Sandbox API
   </a>
   To start your Phoenix server:
 </h2>
-<ul><li>Install dependencies with <a href="https://hexdocs.pm/mix/Mix.Tasks.Deps.Get.html"><code class="inline">mix deps.get</code></a></li><li>Start Phoenix endpoint with <a href="https://hexdocs.pm/phoenix/1.6.10/Mix.Tasks.Phx.Server.html"><code class="inline">mix phx.server</code></a> or inside IEx with <code class="inline">iex -S mix phx.server</code></li></ul><p>Or if you have docker just:</p><ul><li><pre><code class="makeup elixir" translate="no"><span class="w">  </span><span class="n">docker</span><span class="o">-</span><span class="n">compose</span><span class="w"> </span><span class="n">up</span><span class="w"> </span><span class="o">-</span><span class="n">d</span></code></pre></li></ul><h2 id="real-time-data" class="section-heading">
+<ul><li><p>Install dependencies with <a href="https://hexdocs.pm/mix/Mix.Tasks.Deps.Get.html"><code class="inline">mix deps.get</code></a></p></li><li><p>in assets directory</p><pre><code class="makeup elixir" translate="no"><span class="n">npm</span><span class="w"> </span><span class="n">install</span></code></pre></li><li><p>Start Phoenix endpoint with <a href="https://hexdocs.pm/phoenix/1.6.10/Mix.Tasks.Phx.Server.html"><code class="inline">mix phx.server</code></a> or inside IEx with <code class="inline">iex -S mix phx.server</code></p></li></ul><p>Or if you have docker just:</p><pre><code class="makeup elixir" translate="no"><span class="n">docker</span><span class="o">-</span><span class="n">compose</span><span class="w"> </span><span class="n">up</span><span class="w"> </span><span class="o">-</span><span class="n">d</span></code></pre><p> Inside docker</p><pre><code class="makeup elixir" translate="no"><span class="n">cd</span><span class="w"> </span><span class="n">assets</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">npm</span><span class="w"> </span><span class="n">install</span></code></pre><h2 id="real-time-data" class="section-heading">
   <a href="#real-time-data" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
   <p class="sr-only">real-time-data</p>
   </a>
