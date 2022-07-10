@@ -40,19 +40,13 @@ GET /accounts/:account_id/transactions/:transaction_id
 Or if you have docker just:
 
 ```
-
 docker-compose up -d
 ```
-
 
  Inside docker
 
 ```
 cd assets && npm install
-```
-
-```
-  
 ```
 
 ## Real time data
